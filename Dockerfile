@@ -13,6 +13,8 @@ RUN apt-get update && apt-get install -y \
     dnsutils \
     curl \
     socat \
+    iptables \
+    arping \
     && rm -rf /var/lib/apt/lists/* \
     && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
     && dpkg-reconfigure -f noninteractive tzdata
