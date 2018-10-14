@@ -15,6 +15,7 @@ RUN apt-get update && apt-get install -y \
     socat \
     iptables \
     arping \
+    ethtool \
     && rm -rf /var/lib/apt/lists/* \
     && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
     && dpkg-reconfigure -f noninteractive tzdata
