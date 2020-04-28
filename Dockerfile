@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 ADD sources.list /etc/apt/sources.list
 RUN apt-get update && apt-get install -y \
@@ -18,6 +18,7 @@ RUN apt-get update && apt-get install -y \
     arping \
     ethtool \
     bc \
+    fio \
     && rm -rf /var/lib/apt/lists/* \
     && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
     && dpkg-reconfigure -f noninteractive tzdata
